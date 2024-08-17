@@ -12,8 +12,8 @@ const Analytics = () => {
     <div id="analytics">
       <h1>Analytics</h1>
       <TotalApplications />
-      <ApplicationsByStatus />
       <JobsAppliedOverTime />
+      <ApplicationsByStatus />
       <ResponseRate />
       <TimeToResponse />
       <TimeToInterview />
