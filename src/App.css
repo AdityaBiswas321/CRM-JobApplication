@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background: #333;
+  color: white;
+  padding: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#app {
+  padding: 1em;
+}
+
+#applications, #tasks, #analytics, #conferences {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  gap: 1em;
+}
+
+form div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form label {
+  margin-bottom: 0.5em;
+}
+
+form input, form textarea {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+button {
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: #333;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#applications-list, #tasks-list, #conferences ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#applications-list li, #tasks-list li, #conferences ul li {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#applications-list button, #tasks-list button, #conferences ul li button {
+  margin-left: 0.5em;
+  padding: 0.3em;
+  font-size: 0.9em;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#applications-list button:hover, #tasks-list button:hover, #conferences ul li button:hover {
+  background-color: #555;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal form div {
+  margin-bottom: 1em;
+}
+
+.modal form button {
+  margin-top: 1em;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #007bff;
+}
+
+.task-card h3 {
+  margin-top: 0;
+}
+
+.task-card p {
+  margin: 0.5em 0;
+}
+
+.task-card button {
+  margin-bottom: 0.5em;
+}
+
+.task-card button:last-child {
+  margin-right: 0; /* Ensures the last button doesn't have extra margin */
+}
+
+
+/* New styles for buttons in modals to have consistent margins */
+.modal button {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.modal button:last-child {
+  margin-right: 0;
+}
+
+
+#analytics {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.analytics-card {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h2 {
+  margin-top: 0;
 }
